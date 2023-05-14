@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { redirect } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 function SignIn() {
+  const naviaget = useNavigate();
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
   function handleChange(event) {
@@ -11,9 +12,9 @@ function SignIn() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if(credentials.email == "keerthivardhantekulapelli@gmail.com" && credentials.password == "1234"){
-        // window.location.href = "/Home";
-        return redirect("/Home")
+    if(credentials.email == "test@gmail.com" && credentials.password == "1234"){
+        naviaget('/Home')
+        return;
     }
     else{
         alert("Invalid Credentials");

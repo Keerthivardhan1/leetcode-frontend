@@ -27,7 +27,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  /* min-width: 320px; */
+  width: 100vw;
   min-height: 100vh;
 }
 
@@ -46,6 +47,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 1rem;
 }
 button:hover {
   border-color: #646cff;
@@ -84,6 +86,8 @@ input{
   align-items: center;
   width: 40vw;
   padding: 1rem;
+  margin: 0 auto;
+    margin-bottom: 0.4rem;
 }
 
 .problemsList{
@@ -103,4 +107,122 @@ input{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.newqform{
+  height: 80vh;
+  width: 90vw;
+}
+
+.output{
+  border: 2px solid rgba(255, 255, 255, 0.87);
+  width: 80vw ;
+  min-height: fit-content;
+  padding: 1rem;
+  margin: 1rem;
+
+}
+/* ----- */
+
+.logo {
+  height: 2em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  /* border: 2px solid red; */
+  animation: logo-spin 3s ease-in-out 1s  3 ;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.icon{
+  width: fit-content;
+  margin-top: -4rem;
+    position: absolute;
+}
+
+img{
+  width: 3rem;
+  height: 2rem;
+}
+
+
+/* footer */
+
+.footer{
+  border: 2px solid rgba(58, 57, 57, 0.87);
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.footercontent{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.home{
+  margin-top: 1rem;
+}
+
+.FullProblemPage{
+  display: flex;
+  gap: 1rem;
+  /* justify-content: space-between;
+   */
+
+  gap: 1.5rem;
+
+
+}
+
+.problemDetails{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} 
+
+.codePart{
+  width: 60%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 50vh; */
+}
+
+.output{
+  min-width: 60%;
+  width: 90%;
+
+}
+
+.textarea{
+  padding: 1rem;
 }
